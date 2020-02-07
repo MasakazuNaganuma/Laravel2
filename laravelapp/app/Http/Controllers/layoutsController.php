@@ -40,4 +40,25 @@ class layoutsController extends Controller
 	{
 		return view('layouts.index6', ['message'=>'Hello!']);
 	}
+
+	public function index7(Request $request)
+	{
+		return view('layouts.index7', ['data'=>$request->data]);
+	}
+
+	public function index8(Request $request)
+	{
+		return view('layouts.index8');
+	}
+
+	public function index9(Request $request)
+	{
+		return view('layouts.index9');
+	}
+
+	public function index10(Request $request)
+	{
+		return view('layouts.index10');
+	}
+
 }

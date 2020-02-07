@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Middleware\HelloMiddleware;
+use App\Http\Middleware\HelloMiddleware2;
 
 /*
 |--------------------------------------------------------------------------
@@ -107,6 +108,10 @@ Route::get('layouts4', 'layoutsController@index4');
 Route::get('layouts5', 'layoutsController@index5');
 Route::get('layouts6', 'layoutsController@index6');
 
+Route::get('layouts7', 'layoutsController@index7')->middleware(HelloMiddleware::class);
+Route::get('layouts8', 'layoutsController@index8')->middleware(HelloMiddleware2::class);
+Route::get('layouts9', 'layoutsController@index9');
+Route::get('layouts10', 'layoutsController@index10')->middleware('hello4');
 
 Route::get('egg5', 'egg5Controller@index');
 Route::post('egg5', 'egg5Controller@post');
