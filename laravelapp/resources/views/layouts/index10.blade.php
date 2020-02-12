@@ -18,3 +18,6 @@
 	copyright 2017 tuyano.
 @endsection
 
+@php
+	phpinfo();
+@endphp

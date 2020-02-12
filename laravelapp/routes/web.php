@@ -112,6 +112,10 @@ Route::get('layouts7', 'layoutsController@index7')->middleware(HelloMiddleware::
 Route::get('layouts8', 'layoutsController@index8')->middleware(HelloMiddleware2::class);
 Route::get('layouts9', 'layoutsController@index9');
 Route::get('layouts10', 'layoutsController@index10')->middleware('hello4');
+Route::get('layouts11', 'layoutsController@index11');
+Route::get('layouts12', 'layoutsController@index12');
+
+
 
 Route::get('egg5', 'egg5Controller@index');
 Route::post('egg5', 'egg5Controller@post');

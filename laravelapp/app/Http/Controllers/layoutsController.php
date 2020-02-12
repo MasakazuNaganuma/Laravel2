@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 
 class layoutsController extends Controller
 {
@@ -61,4 +63,31 @@ class layoutsController extends Controller
 		return view('layouts.index10');
 	}
 
+	public function index11(Request $request)
+	{
+		$items = DB::select('select * from people');
+		return view('layouts.index11', ['items' => $items]);
+	}
+
+	public function index12(Request $request)
+	{
+		if (isset($request->id))
+		{
+			$param = ['id' => $request->id];
+			$items = DB::select('select * from people where id = :id',$param);
+		}else{
+			$items = DB::select('select * from people');
+		}
+
+		return view('layouts.index12', ['items' => $items]);
+	}
+
+	public function post(Request $request)
+	{
+		$validate_rule = [
+			'name' => 'required',
+			'mail' => 'email',
+			'age' => 'numeric|between:0,150',
+		];
+	}
 }
