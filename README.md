@@ -7,3 +7,5 @@ PHPフレームワークLaravel入門のサンプルコード
 ## http://localhost:8000/layouts4/ ・・・P98 図3-22
 ## http://localhost:8000/layouts5/ ・・・P104 図3-25
 ## http://localhost:8000/layouts6/ ・・・P106 図3-26
+
+## http://localhost:8000/layouts12/ ・・・P184 図5-21
