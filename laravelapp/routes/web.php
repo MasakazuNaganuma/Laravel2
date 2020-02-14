@@ -115,6 +115,12 @@ Route::get('layouts10', 'layoutsController@index10')->middleware('hello4');
 Route::get('layouts11', 'layoutsController@index11');
 Route::get('layouts12', 'layoutsController@index12');
 
+Route::get('layouts13', 'layoutsController@index12');
+
+Route::get('layouts14', 'dbController@index');
+Route::post('layouts14', 'dbController@post');
+Route::get('layouts14/add', 'dbController@add');
+Route::post('layouts14/add', 'dbController@create');
 
 
 Route::get('egg5', 'egg5Controller@index');
