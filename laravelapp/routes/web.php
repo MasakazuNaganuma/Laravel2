@@ -125,6 +125,18 @@ Route::get('layouts14/edit', 'dbController@edit');
 Route::post('layouts14/edit', 'dbController@update');
 Route::get('layouts14/del', 'dbController@del');
 Route::post('layouts14/del', 'dbController@remove');
+Route::get('layouts14/show', 'dbController@show');
+Route::get('layouts14/show2', 'dbController@show2');
+Route::get('layouts14/show3', 'dbController@show3');
+Route::get('layouts14/show4', 'dbController@show4');
+Route::get('layouts14/index2', 'dbController@index2');
+Route::get('layouts14/show5', 'dbController@show5');
+Route::get('layouts14/add2', 'dbController@add2');
+Route::post('layouts14/add2', 'dbController@create2');
+Route::get('layouts14/edit2', 'dbController@edit2');
+Route::post('layouts14/edit2', 'dbController@update2');
+
+
 
 Route::get('egg5', 'egg5Controller@index');
 Route::post('egg5', 'egg5Controller@post');
