@@ -123,6 +123,8 @@ Route::get('layouts14/add', 'dbController@add');
 Route::post('layouts14/add', 'dbController@create');
 Route::get('layouts14/edit', 'dbController@edit');
 Route::post('layouts14/edit', 'dbController@update');
+Route::get('layouts14/del', 'dbController@del');
+Route::post('layouts14/del', 'dbController@remove');
 
 Route::get('egg5', 'egg5Controller@index');
 Route::post('egg5', 'egg5Controller@post');
