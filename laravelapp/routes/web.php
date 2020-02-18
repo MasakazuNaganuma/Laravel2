@@ -136,6 +136,8 @@ Route::post('layouts14/add2', 'dbController@create2');
 Route::get('layouts14/edit2', 'dbController@edit2');
 Route::post('layouts14/edit2', 'dbController@update2');
 
+Route::get('person', 'PersonController@index');
+Route::get('person2', 'PersonController@index2');
 
 
 Route::get('egg5', 'egg5Controller@index');
