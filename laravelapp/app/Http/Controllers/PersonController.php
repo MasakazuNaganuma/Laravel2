@@ -29,6 +29,16 @@ class PersonController extends Controller
 		return view('person.find2', ['input' => '']);
 	}
 
+	public function find3(Request $request)
+	{
+		return view('person.find3', ['input' => '']);
+	}
+
+	public function find4(Request $request)
+	{
+		return view('person.find4', ['input' => '']);
+	}
+
 	public function search(Request $request)
 	{
 		$item = Person::find($request->input);
@@ -42,4 +52,21 @@ class PersonController extends Controller
 		$param = ['input' => $request->input, 'item' => $item];
 		return view('person.find2', $param);
 	}
+
+	public function search3(Request $request)
+	{
+		$item = Person::nameEqual($request->input)->first();
+		$param = ['input' => $request->input, 'item' => $item];
+		return view('person.find3', $param);
+	}
+
+	public function search4(Request $request)
+	{
+		$min = $request->input * 1;
+		$max = $min + 10;
+		$item = Person::ageGreaterThan($min)->ageLessThan($max)->first();
+		$param = ['input' => $request->input, 'item' => $item];
+		return view('person.find4', $param);
+	}
+
 }
