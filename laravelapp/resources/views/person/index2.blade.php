@@ -1,10 +1,10 @@
 @extends('layouts.helloapp')
 
-@section('title', 'Person.index')
+@section('title', 'Person.index2')
 
 @section('menubar')
 	@parent
-	インデックスページ
+	インデックスページ2
 @endsection
 
 @section('content')
