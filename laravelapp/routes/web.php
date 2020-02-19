@@ -140,6 +140,8 @@ Route::get('person', 'PersonController@index');
 Route::get('person2', 'PersonController@index2');
 Route::get('person2/find', 'PersonController@find');
 Route::post('person2/find', 'PersonController@search');
+Route::get('person2/find2', 'PersonController@find2');
+Route::post('person2/find2', 'PersonController@search2');
 
 Route::get('egg5', 'egg5Controller@index');
 Route::post('egg5', 'egg5Controller@post');
