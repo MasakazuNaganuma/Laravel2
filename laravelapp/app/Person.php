@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
+use App\Scopes\ScopePerson;
 
 class Person extends Model
 {
@@ -26,13 +27,23 @@ class Person extends Model
 	{
 		return $query->where('age', '<=', $n);
 	}	
+// List6-15 グローバルスコープを作成する
+//	protected static function boot()
+//	{
+//		parent::boot();
+//
+//		static::addGlobalScope('age', function (Builder $builder){
+//			$builder->where('age', '>', 20);
+//		});
+//	}
 
+//	List6-17 Personモデルクラスの修正
 	protected static function boot()
 	{
 		parent::boot();
-
-		static::addGlobalScope('age', function (Builder $builder){
-			$builder->where('age', '>', 20);
-		});
+		static::addGlobalScope(new ScopePerson);
 	}
+
+
+
 }
