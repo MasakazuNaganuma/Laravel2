@@ -26,7 +26,8 @@ class Person extends Model
 	public function scopeAgeLessThan($query, $n)
 	{
 		return $query->where('age', '<=', $n);
-	}	
+	}
+
 // List6-15 グローバルスコープを作成する
 //	protected static function boot()
 //	{
@@ -38,11 +39,20 @@ class Person extends Model
 //	}
 
 //	List6-17 Personモデルクラスの修正
-	protected static function boot()
-	{
-		parent::boot();
-		static::addGlobalScope(new ScopePerson);
-	}
+//	protected static function boot()
+//	{
+//		parent::boot();
+//		static::addGlobalScope(new ScopePerson);
+//	}
+
+//	List6-18 モデルを修正する
+	protected $guarded = array('id');
+
+	public static $rules = array(
+		'name' => 'required',
+		'mail' => 'email',
+		'age'  => 'integer|min:0|max:150'
+	);
 
 
 
