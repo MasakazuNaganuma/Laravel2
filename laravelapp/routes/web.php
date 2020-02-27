@@ -148,7 +148,8 @@ Route::get('person2/find4', 'PersonController@find4');
 Route::post('person2/find4', 'PersonController@search4');
 Route::get('person2/add', 'PersonController@add');
 Route::post('person2/add', 'PersonController@create');
-
+Route::get('person2/edit', 'PersonController@edit');
+Route::post('person2/edit', 'PersonController@update');
 
 
 Route::get('egg5', 'egg5Controller@index');
