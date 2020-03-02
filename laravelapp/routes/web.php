@@ -150,6 +150,8 @@ Route::get('person2/add', 'PersonController@add');
 Route::post('person2/add', 'PersonController@create');
 Route::get('person2/edit', 'PersonController@edit');
 Route::post('person2/edit', 'PersonController@update');
+Route::get('person2/del', 'PersonController@delete');
+Route::post('person2/del', 'PersonController@remove');
 
 
 Route::get('egg5', 'egg5Controller@index');
