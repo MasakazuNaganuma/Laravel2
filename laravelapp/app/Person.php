@@ -60,5 +60,11 @@ class Person extends Model
 		return $this->hasOne('App\Board');
 	}
 
+//List6-37 Personモデルの修正
+	public function boards()
+	{
+		return $this->hasMany('App\Board');
+	}
+
 
 }
