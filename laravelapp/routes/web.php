@@ -138,6 +138,7 @@ Route::post('layouts14/edit2', 'dbController@update2');
 
 Route::get('person',         'PersonController@index');
 Route::get('person2',        'PersonController@index2');
+Route::get('person3',        'PersonController@index3');
 Route::get('person2/find',   'PersonController@find');
 Route::post('person2/find',  'PersonController@search');
 Route::get('person2/find2',  'PersonController@find2');

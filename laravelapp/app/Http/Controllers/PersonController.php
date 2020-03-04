@@ -19,6 +19,14 @@ class PersonController extends Controller
 		return view('person.index2', ['items' => $items]);
 	}
 
+	public function index3(Request $request)
+	{
+		$hasItems = Person::has('boards')->get();
+		$noItems  = Person::doesntHave('board')->get();
+		$param    = ['hasItems' => $hasItems, 'noItems' => $noItems];
+		return view('person.index3', $param);
+	}
+
 	public function find(Request $request)
 	{
 		return view('person.find', ['input' => '']);
