@@ -159,6 +159,8 @@ Route::get('board2',     'BoardController@index2');
 Route::get('board/add',  'BoardController@add');
 Route::post('board/add', 'BoardController@create');
 
+Route::resource('rest', 'RestappController');
+
 Route::get('egg5', 'egg5Controller@index');
 Route::post('egg5', 'egg5Controller@post');
 
