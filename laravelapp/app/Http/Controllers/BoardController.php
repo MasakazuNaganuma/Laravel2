@@ -13,6 +13,12 @@ class BoardController extends Controller
 		return view('board.index', ['items' => $items]);
 	}
 
+	public function index2(Request $request)
+	{
+		$items = Board::with('person')->get();
+		return view('board.index2', ['items' => $items]);
+	}
+
 	public function add(Request $request)
 	{
 		return view('board.add');

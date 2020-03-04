@@ -155,6 +155,7 @@ Route::get('person2/del',    'PersonController@delete');
 Route::post('person2/del',   'PersonController@remove');
 
 Route::get('board',      'BoardController@index');
+Route::get('board2',     'BoardController@index2');
 Route::get('board/add',  'BoardController@add');
 Route::post('board/add', 'BoardController@create');
 
