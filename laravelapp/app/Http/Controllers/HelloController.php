@@ -58,5 +58,9 @@ h1 { font-size:100pt; text-align:right; color:#eee;
 EOF;
 	}
 
+	public function rest(Request $request)
+	{
+		return view('hello.rest');
+	}
 
 }
