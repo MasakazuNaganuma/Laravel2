@@ -23,7 +23,7 @@ Route::get('/', view('welcome'));
 */
 
 
-Route::get('hello','HelloController@index')->middleware(HelloMiddleware::class);
+Route::get('hello','HelloController@index')->middleware('auth');
 
 /*
 Route::get('hello',function () {
