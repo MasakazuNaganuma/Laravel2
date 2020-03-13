@@ -3,6 +3,7 @@
     <title>@yield('title')</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="http://localhost:8000/favicon.ico" type="image/x-icon" rel="shortcut icon">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/css/app.css') }}">
     <style>
     body {font-size:16pt; color:#999; margin: 5px; }
     h1 { font-size:50pt; text-align:right; color:#f6f6f6;
@@ -15,7 +16,6 @@
     .content {margin:10px; }
     .footer { text-align:right; font-size:10pt; margin:10px;
         border-bottom:solid 1px #ccc; color:#ccc; }
-    <link rel="stylesheet" type="text/css" href="{{ asset('/css/app.css') }}">
     </style>
 </head>
 <body>
